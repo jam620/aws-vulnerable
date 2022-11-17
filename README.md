@@ -19,7 +19,7 @@ El objetivo de este articulo es demostrar la implementación de un hacking lab e
 
 1. Cuenta de AWS (no gratuita)
 2. Una vm vulnerable de vulnhub usaremos la siguiente https://download.vulnhub.com/breach/Breach-1.0.zip
-3. De igual manera debemos verificar que la Vm este dentro d los kernels permitidos https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html
+3. De igual manera debemos verificar que la Vm este dentro de los kernels permitidos https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html
 
 
 
@@ -33,7 +33,7 @@ Ahora vamos a proceder a crear nuestra VPC, haciendo click en el botón naranja 
 
 ![2](img/2.png)
 
-Demos realizar las siguiente modificaciones, en el nombre del proyecto y la red debe ser **192.168.110.0/24**, para este lab es asi dado que es la red usada en la vm de vulnhub.
+Debemos realizar las siguiente modificaciones, en el nombre del proyecto y la red debe ser **192.168.110.0/24**, para este lab es asi dado que es la red usada en la vm de vulnhub.
 
 ![3](img/3.png)
 
@@ -111,7 +111,7 @@ Por último le damos 25GB de almacenamiento y ya podemos **Lanzar Instancia**
 
 ![21](img/21.png)
 
-Probamos el acceso a la instancia, el damos permisos correspondientes a la llave y accedemos 
+Probamos el acceso a la instancia, le damos permisos correspondientes a la llave y accedemos 
 
 ```shell
 chmod 400 kalidemo
@@ -180,7 +180,7 @@ Una vez seleccionado el objeto debemos apuntar los **URI** lo usaremos más adel
 
 ![35](img/35.png)
 
-Si les aparece algo como esto, debemos verificar los permsisos
+Si les aparece algo como esto, debemos verificar los permisos
 
 ![36](img/36.png)
 
@@ -282,7 +282,7 @@ Crearemos un role llamado vmimport y le damos acceso de importación y exportaci
 
 ` aws iam create-role --role-name vmimport --assume-role-policy-document "file://~/trust-policy.json"`
 
-Si todo dale bien debemos ver lo siguiente
+Si todo sale bien debemos ver lo siguiente
 
 ![48](img/48.png)
 
